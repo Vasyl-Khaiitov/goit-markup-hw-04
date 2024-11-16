@@ -346,7 +346,7 @@ button {
 }
 .team-link:hover,
 .team-link:focus {
-  background-color: #31d0aa;
+  background-color: #404bbf;
 }
 .team-icon {
 }
@@ -460,14 +460,19 @@ button {
   gap: 16px;
   align-items: center;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 17px;
 }
 .icon-footer-item {
+  width: 40px;
+  height: 40px;
 }
 
 .footer-link {
 }
 
 .footer-icon {
+}
+.footer-link:hover {
+  background-color: #31d0aa;
 }
 /* #endregion */
