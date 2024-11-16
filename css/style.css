@@ -88,7 +88,8 @@ button {
   gap: 40px;
 }
 
-.nav-item {
+.nav-link.current {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link {
@@ -145,6 +146,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -165,6 +167,10 @@ button {
     ),
     url(../images/people-office-1-min.jpg);
   width: 1440px;
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -349,6 +355,7 @@ button {
   background-color: #404bbf;
 }
 .team-icon {
+  fill: #f4f4fd;
 }
 /* #endregion */
 /* #region Portfoio */
@@ -365,6 +372,7 @@ button {
 .portfolio-item {
   display: block;
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .thumba {
   position: relative;
@@ -410,6 +418,8 @@ button {
   letter-spacing: 0.02em;
 }
 .portfolio-item:hover .overlay {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transform: translateY(0);
 }
 /* #endregion */
@@ -422,9 +432,11 @@ button {
 
 .footer {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
-
+.footer-logo-container {
+  margin-right: 120px;
+}
 .footer-logo .logo-part {
   font-weight: 700;
   line-height: 1.17;
@@ -450,6 +462,7 @@ button {
 .footer-link-text {
   font-weight: 500;
   font-size: 16px;
+  margin-bottom: 16px;
 
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -460,7 +473,6 @@ button {
   gap: 16px;
   align-items: center;
   justify-content: center;
-  margin-top: 17px;
 }
 .icon-footer-item {
   width: 40px;
@@ -471,8 +483,10 @@ button {
 }
 
 .footer-icon {
+  fill: #f4f4fd;
 }
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus {
   background-color: #31d0aa;
 }
 /* #endregion */
